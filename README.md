@@ -1,11 +1,16 @@
 # ALT-FISH
-Collection of scripts for automated analysis of ALT-FISH stained microscopy data with or without additional co-staining (e.g, cytoplasm marker).
-The scripts require 16-bit .TIF image z-stacks as input, with at least 2 channels (one for nucleus segmentation, one for spot segmentation), but the analysis is extensible for up to 4-channel images.
+Scripts for automated analysis of ALT-FISH microscopy data with or without additional co-staining (e.g, cytoplasm marker, immunolabeling).
+The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) channels as input.
 
-# Script 1: Telosegment toolkit
-* identification of the optimal focus z-volume for automated removal of empty frames and out-of-focus positions
+## Telosegment toolkit: What does the script do?
+
+
+
+
+* optimal focus volume identification for automated removal of empty frames and out-of-focus positions 
 * data reduction by z-projection for subsequent 2D segmentation procedures
-* simple segmentation of nuclei
+* 
+* segmentation of cell nuclei (comprising adjustable size-filter)
 * segmentation of spots within the segmented nuclear area
 * quantification of:
   * whole image intensity parameters 
@@ -13,6 +18,15 @@ The scripts require 16-bit .TIF image z-stacks as input, with at least 2 channel
   * mask fluorescence intensity parameters in up to 4 channels (mean, median, maximum, standard deviation, etc.)
 
 
+
+* customizable batch processing 
+
+
+## Telosegment-cytosegment toolkit: What does the script do?
+
+
+
+# Script 1: Telosegment toolkit
 
 
 
