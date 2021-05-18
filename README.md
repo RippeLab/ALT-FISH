@@ -1,2 +1,3 @@
 # ALT-FISH
-Collection of scripts for the automated analyis and filtering of ALT-FISH microscopy data.
+Collection of R scripts for the automated analyis and quality filtering of ALT-FISH microscopy data.
+
