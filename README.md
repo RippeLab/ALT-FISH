@@ -17,31 +17,27 @@ The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) c
 * customizable batch processing of image stacks from multiple folders
 
 ### Script outputs:
-* each run  generates a results folder with date-time stamp containing all the output
-* result files (.csv) containing quantification results for each cell and/or image position plus run-specific parameters
-    "_positions" : list with a numerical position id (unique identifier) assigned to each processed image stack 
-  
-    "_nucleus_shape_features" : nucleus mask xy-positions and shape features sorted by position and nucleus id 
-    
-    "_nucleus_spotmask_npmask_area_intensity_results" : spot numbers, aggregated spot areas and intensity features sorted by position and nucleus id 
-    
-    "_parameters_used_in_run" : summary of user-adjustable parameters used in this run
-    
-    "_position_results" : per-position image features (identified z-focus range, type of projection, background estimates)
-    
-    "_single_spot_shape_features_and_intensities" : shape and intensity features for each segmented spot sorted by position, nucleus and spot id
-  
+Each run generates a folder with unique date-time stamp containing all the results
+* results files (.csv) containing quantification results for each cell and/or image position plus run-specific parameters:
+    - "_positions" : list with a numerical position id (unique identifier) assigned to each processed image stack 
+    - "_nucleus_shape_features" : nucleus mask xy-positions and shape features sorted by position and nucleus id 
+    - "_nucleus_spotmask_npmask_area_intensity_results" : spot numbers, aggregated spot areas and intensity features sorted by position and nucleus id 
+    - "_parameters_used_in_run" : summary of user-adjustable parameters used in this run
+    - "_position_results" : per-position image features (identified z-focus range, type of projection, background estimates)
+    - "_single_spot_shape_features_and_intensities" : shape and intensity features for each segmented spot sorted by position, nucleus and spot id
 * images with the created masks for visual inspection, publication or optional downstream analyses :
+    - "_BestSlices_projections_with_masks_binary" : BestSlices z-projections used for segmentation with binarized masks
+    - "_BestSlices_projections_with_masks_outlines" : as above, but with mask outlines and including the nucleoplasm mask
+    - "_BestSlices_projections_with_masks_scaledRGB" : scaled RGB image with colored mask representation for visual inspection
+* carbon copy of the script used in this run ("_Telosegment_toolkit_script_used_in_this_run.R") – for traceability purposes
+* optional: R workspace after run completion ("_R_workspace_after_run_completion.RData") – useful for trouble-shooting
 
-  "_BestSlices_projections_with_masks_binary" : BestSlices z-projections used for segmentation with binarized masks
-  
-  "_BestSlices_projections_with_masks_outlines" : as above, but with mask outlines and including the nucleoplasm mask
-  
-  "_BestSlices_projections_with_masks_scaledRGB" : scaled RGB image with colored mask representation for visual inspection
-  
-* carbon copy of the script used in this run ("_Telosegment_toolkit_script_used_in_this_run.R") for traceability purposes
-* optional: an image with the created nuclear and aggregate masks for visual inspection (for each cell)
-
+### Requirements
+* R version 3.6.0 or higher (tested with 4.0.2)
+* R packages:
+  * [EBImage](https://bioconductor.org/packages/release/bioc/html/EBImage.html) version 4.32.0
+* associated custom functions for image processing and segmentation:
+  * Download the [functions](https://github.com/AnneRademacher/Optodroplets/tree/main/functions)
 
 
 
