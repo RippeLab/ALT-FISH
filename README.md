@@ -3,7 +3,7 @@ Scripts for automated analysis of ALT-FISH microscopy data with or without addit
 The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) channels as input.
 
 ## Telosegment toolkit
-What does this script do?
+### What does this script do?
 * automatically reads in and processes .TIF image stacks for extraction of image features
 * optimal focus volume determination to remove empty frames and identify out-of-focus positions 
 * data reduction by z-projection for subsequent 2D segmentation procedures
@@ -16,9 +16,9 @@ What does this script do?
   * number of spots and aggregated spot area per nucleus
 * customizable batch processing of image stacks from multiple folders
 
-Script outputs:
-  * each run of the script generates a results folder with date-time stamp containing all the output
-  * .csv results files contain the above-mentioned quantification results for each cell and/or image position as well as run-specific parameters
+### Script outputs:
+* each run  generates a results folder with date-time stamp containing all the output
+* .csv results files contain the above-mentioned quantification results for each cell and/or image position plus run-specific parameters
   
     "_positions" : list with a numerical position id (unique identifier) assigned to each processed image stack 
   
@@ -32,9 +32,9 @@ Script outputs:
     
     "_single_spot_shape_features_and_intensities" : shape and intensity features for each segmented spot sorted by position, nucleus and spot id
   
-  * pdf with a basic droplet abundance vs. concentration plot
-  * fit parameters (only in R command line)
-  * optional: an image with the created nuclear and aggregate masks for visual inspection (for each cell)
+* images with the created nuclear and spot masks for visual inspection, publication or optional 
+* fit parameters (only in R command line)
+* optional: an image with the created nuclear and aggregate masks for visual inspection (for each cell)
 
 
 
