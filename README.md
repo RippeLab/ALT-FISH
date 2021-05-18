@@ -5,7 +5,7 @@ The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) c
 ## Telosegment toolkit
 ### What does this script do?
 * automatically reads in and processes .TIF image stacks for extraction of image features
-* optimal focus volume determination to remove empty frames and identify out-of-focus positions 
+* optimal focus volume determination ("BestSlices") to remove empty frames and identify out-of-focus positions 
 * data reduction by z-projection for subsequent 2D segmentation procedures
 * segmentation of cell nuclei (comprising adjustable size filter and removal of border nuclei)
 * segmentation of spots within the segmented nuclear areas
@@ -18,8 +18,7 @@ The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) c
 
 ### Script outputs:
 * each run  generates a results folder with date-time stamp containing all the output
-* .csv results files contain the above-mentioned quantification results for each cell and/or image position plus run-specific parameters
-  
+* result files (.csv) containing quantification results for each cell and/or image position plus run-specific parameters
     "_positions" : list with a numerical position id (unique identifier) assigned to each processed image stack 
   
     "_nucleus_shape_features" : nucleus mask xy-positions and shape features sorted by position and nucleus id 
@@ -32,8 +31,11 @@ The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) c
     
     "_single_spot_shape_features_and_intensities" : shape and intensity features for each segmented spot sorted by position, nucleus and spot id
   
-* images with the created nuclear and spot masks for visual inspection, publication or optional 
-* fit parameters (only in R command line)
+* images with the created masks for visual inspection, publication or optional downstream analyses :
+  "_BestSlices_projections_with_masks_binary" : BestSlices z-projections used for segmentation with corresponding binarized masks
+  "_BestSlices_projections_with_masks_outlines" : same as above, but with masks represented as outlines and including the nucleoplasm mask
+  "_BestSlices_projections_with_masks_scaledRGB"
+* carbon copy of the script used in this run ("_Telosegment_toolkit_script_used_in_this_run.R") for traceability purposes
 * optional: an image with the created nuclear and aggregate masks for visual inspection (for each cell)
 
 
