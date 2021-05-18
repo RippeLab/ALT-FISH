@@ -7,7 +7,7 @@ What does this script do?
 * automatically reads in and processes .TIF image stacks for extraction of image features
 * optimal focus volume determination to remove empty frames and identify out-of-focus positions 
 * data reduction by z-projection for subsequent 2D segmentation procedures
-* segmentation of cell nuclei (comprising adjustable size-filter)
+* segmentation of cell nuclei (comprising adjustable size filter and removal of border nuclei)
 * segmentation of spots within the segmented nuclear areas
 * quantification of:
   * whole image parameters (optimal z-volume, background estimates) 
@@ -18,9 +18,19 @@ What does this script do?
 
 Script outputs:
   * each run of the script generates a results folder with date-time stamp containing all the output
-  * .csv text files contain the above-mentioned quantification results for each cell and/or image position as well as information about adjustable variables     (like segmentation thresholds, size-filters used in this particular run)
+  * .csv results files contain the above-mentioned quantification results for each cell and/or image position as well as run-specific parameters
   
-    _nucleus_shape_features.csv
+    "_positions" : list with a numerical position id (unique identifier) assigned to each processed image stack 
+  
+    "_nucleus_shape_features" : nucleus mask xy-positions and shape features sorted by position and nucleus id 
+    
+    "_nucleus_spotmask_npmask_area_intensity_results" : spot numbers, aggregated spot areas and intensity features sorted by position and nucleus id 
+    
+    "_parameters_used_in_run" : summary of user-adjustable parameters used in this run
+    
+    "_position_results" : per-position image features (identified z-focus range, type of projection, background estimates)
+    
+    "_single_spot_shape_features_and_intensities" : shape and intensity features for each segmented spot sorted by position, nucleus and spot id
   
   * pdf with a basic droplet abundance vs. concentration plot
   * fit parameters (only in R command line)
