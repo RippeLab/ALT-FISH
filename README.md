@@ -14,7 +14,7 @@ The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) c
   * size, xy-positions and shape parameters for the generated nucleus and spot masks
   * mask fluorescence intensity parameters in up to 4 channels (mean, median, maximum, standard deviation, etc.)
   * number of spots and aggregated spot area per nucleus
-* customizable batch processing of image stacks from multiple folders
+* customizable batch processing of image stacks from multiple folders (multirun mode)
 
 ### Outputs:
 Each run generates a folder with unique date-time stamp containing all the results
