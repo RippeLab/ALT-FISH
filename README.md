@@ -32,9 +32,13 @@ The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) c
     "_single_spot_shape_features_and_intensities" : shape and intensity features for each segmented spot sorted by position, nucleus and spot id
   
 * images with the created masks for visual inspection, publication or optional downstream analyses :
-  "_BestSlices_projections_with_masks_binary" : BestSlices z-projections used for segmentation with corresponding binarized masks
-  "_BestSlices_projections_with_masks_outlines" : same as above, but with masks represented as outlines and including the nucleoplasm mask
-  "_BestSlices_projections_with_masks_scaledRGB"
+
+  "_BestSlices_projections_with_masks_binary" : BestSlices z-projections used for segmentation with binarized masks
+  
+  "_BestSlices_projections_with_masks_outlines" : as above, but with mask outlines and including the nucleoplasm mask
+  
+  "_BestSlices_projections_with_masks_scaledRGB" : scaled RGB image with colored mask representation for visual inspection
+  
 * carbon copy of the script used in this run ("_Telosegment_toolkit_script_used_in_this_run.R") for traceability purposes
 * optional: an image with the created nuclear and aggregate masks for visual inspection (for each cell)
 
