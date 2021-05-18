@@ -41,7 +41,7 @@ Each run generates a folder with unique date-time stamp containing all the resul
 
 
 # Script 2: Telosegment-cytosegment toolkit
-The working principle and output is the similar as for script 1 (see above). However, this script is limited to 3 channel images, where one channel constitutes a nuclear staining (for nucleus segmentation), another one provides a cytoplasm marker (for cell segmentation) and a third channel corresponds to the channel where spot segmentation is carried out (e.g., ALT-FISH signal). It will segment nuclei and cytoplasm
+The working principle and output format is similar to script 1 (see above). However, the functionality is limited to 3 channel images, where one channel constitutes a nuclear staining (for nucleus segmentation), another one provides a cytoplasm marker (for cell segmentation) and a third channel corresponds to the channel where spot segmentation is carried out (e.g., ALT-FISH signal). The script segments the nucleus and cytoplasm area of each cell in 2D, followed by the quantification of spot numbers and features in these areas. Spot detection and segmentation stringenies for nuclei and cytoplasmic areas can be adjusted separately (see comments within the script for details). Moreover, the script provides means for automatically removing border cells (recommended) and segmentation artifacts (e.g.,faulty matching of cytoplasmic and nuclear masks).
 
 ### Additional Requirements
 
