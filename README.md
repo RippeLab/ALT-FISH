@@ -1,3 +1,10 @@
 # ALT-FISH
-Collection of R scripts for the automated analyis and quality filtering of ALT-FISH microscopy data.
+Collection of scripts for the automated segmentation, analysis and filtering of ALT-FISH stained microscopy data.
 
+# Telosegment toolkit
+Segments nuclei and and spots in 
+
+# Telosegment-cytosegment toolkit
+
+
+# Filtering and import of segmentation data
