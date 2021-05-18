@@ -1,5 +1,5 @@
 # ALT-FISH
-Collection of scripts for automated analysis of ALT-FISH stained microscopy data without or with cytoplasm staining.
+Collection of scripts for automated analysis of ALT-FISH stained microscopy data with or without additional co-staining (e.g, cytoplasm marker).
 The scripts require 16-bit .TIF image z-stacks as input, with at least 2 channels (one for nucleus segmentation, one for spot segmentation), but the analysis is extensible for up to 4-channel images.
 
 # Script 1: Telosegment toolkit
