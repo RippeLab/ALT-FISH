@@ -2,9 +2,9 @@
 Scripts for automated analysis of ALT-FISH microscopy data with or without additional co-staining (e.g, cytoplasm marker, immunolabeling).
 The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) channels as input.
 
-## Telosegment toolkit
+# Script 1: Telosegment toolkit
 ### What does this script do?
-* automatically reads in and processes .TIF image stacks for extraction of image features
+* importing and processing of .TIF image stacks for the quantitative extraction of image features
 * optimal focus volume determination ("BestSlices") to remove empty frames and identify out-of-focus positions 
 * data reduction by z-projection for subsequent 2D segmentation procedures
 * segmentation of cell nuclei (comprising adjustable size filter and removal of border nuclei)
@@ -36,15 +36,14 @@ Each run generates a folder with unique date-time stamp containing all the resul
 * R version 3.6.0 or higher (tested with 4.0.2)
 * R packages:
   * [EBImage](https://bioconductor.org/packages/release/bioc/html/EBImage.html) version 4.32.0
-* associated custom functions for image processing and segmentation:
-  * Download the [functions](https://github.com/AnneRademacher/Optodroplets/tree/main/functions)
+* associated custom [functions](https://github.com/lfra/ALT-FISH/tree/main/functions) for image processing and segmentation
 
 
 
-## Telosegment-cytosegment toolkit: What does the script do?
-The script is limited to 3 channel images, where one channel constitutes a nuclear staining (for nucleus segmentation), another one provides a cytoplasm marker (for cell segmentation) and a third channel corresponds to the channel where spot segmentation is carried out (e.g., ALT-FISH signal).
+# Script 2: Telosegment-cytosegment toolkit
+The working principle and output is the similar as for script 1 (see above). However, this script is limited to 3 channel images, where one channel constitutes a nuclear staining (for nucleus segmentation), another one provides a cytoplasm marker (for cell segmentation) and a third channel corresponds to the channel where spot segmentation is carried out (e.g., ALT-FISH signal). It will segment nuclei and cytoplasm
 
-This script extracts the same image features as the Telosegment toolkit script, but is   
+### Additional Requirements
 
 
 # Script 1: Telosegment toolkit
