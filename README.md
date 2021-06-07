@@ -1,6 +1,6 @@
 # ALT-FISH script collection
 Scripts for automated analysis of ALT-FISH microscopy data with or without additional co-staining (e.g, cytoplasm marker, immunolabeling).
-The scripts require 16-bit .TIF image z-stacks with at least 2 (and maximum 4) channels as input.
+The scripts have been written to process 1024x1024px 16-bit .TIF image z-stacks with at least 2 (and maximum 4) channels as input.
 
 # Script 1: [Telosegment toolkit](Telosegment_toolkit_multirun.R)
 ### What does this script do?
